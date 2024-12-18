@@ -1,12 +1,8 @@
 import { IconContext } from "react-icons";
 import { CiSearch } from "react-icons/ci";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
-import { useFindMovies } from "../../hooks/MoviesHooks";
-import { useState } from "react";
-import { IMovie } from "../../models/IMovie";
 import MatchedMovies from "../MatchedMovies";
 import { utilsSlice } from "../../store/reducers/UtilsSlice";
-import { useSelector } from "react-redux";
 
 function Search() {
   const {setSearchField} = utilsSlice.actions

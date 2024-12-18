@@ -53,7 +53,10 @@ export const useFindMovies = () => {
     const matchingMovies = []
 
     for (const movie of moviesInfo) {
-      if (movie.title.includes(title)) matchingMovies.push(movie)
+      const lowerMovieTitle = movie.title.toLowerCase()
+      const lowerInputTitle = title.toLowerCase()
+
+      if (lowerMovieTitle.includes(lowerInputTitle)) matchingMovies.push(movie)
     } 
 
     return matchingMovies

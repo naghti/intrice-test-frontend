@@ -17,6 +17,7 @@ function Select({
   const filterArray = filterFunction(filterField)
 
   const selectFilter = (value: string) => {
+    console.log(value)
     if (value === "null") 
       dispatch(setFilter([filterField, null]))
     else
