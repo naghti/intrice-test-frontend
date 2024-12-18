@@ -14,7 +14,6 @@ function MatchedMovies() {
 
   const findMoviesFunction = useFindMovies()
   const matchesMovies = findMoviesFunction(searchField)
-  console.log(searchField)
 
   function pickMovie(info: IMovie) {
     dispatch(setActiveMovie(info))

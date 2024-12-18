@@ -14,15 +14,15 @@ function SelectBox() {
       <Select
         name="По Жанру"
         filterField={"genre"}
-        />
+      />
       <Select
         name="По Году выпуска"
         filterField={"release_year"}
-        />
+      />
       <Select
         name="По Дате Добавления"
         filterField={"createdAt"}
-        />
+      />
       <Select
         name="По Дате обновления"
         filterField={"updatedAt"}

@@ -21,7 +21,7 @@ export const useGetFilterFieldsMovies = () => {
     }
     filterArray = Array.from(filterSet)
     return filterArray
-  },[])
+  },[moviesInfo])
 
   return filterFunction
 }
@@ -55,6 +55,5 @@ export const useGetFilteredMovies = () => {
   };
   
   const filteredMovies = moviesInfo.filter(filterFunction)
-  console.log(filters)
   return filteredMovies
 }

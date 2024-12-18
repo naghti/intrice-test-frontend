@@ -49,18 +49,24 @@ export const useFindMovies = () => {
   const {moviesInfo} = useAppSelector(state => state.moviesReducer)
 
   const findMovies = useCallback((title: string) => {
-    if (title == "") return [] 
+    if (title == "" || title.length < 3) return [] 
     const matchingMovies = []
 
     for (const movie of moviesInfo) {
-      const lowerMovieTitle = movie.title.toLowerCase()
+      const movieFildsLowerCase = [
+        movie.title.toLowerCase(),
+        movie.genre.toLowerCase(),
+        movie.director.toLowerCase(),
+        movie.annotation.toLowerCase(),
+      ]
       const lowerInputTitle = title.toLowerCase()
-
-      if (lowerMovieTitle.includes(lowerInputTitle)) matchingMovies.push(movie)
+      const check = movieFildsLowerCase.some(item => item.includes(lowerInputTitle))
+      
+      if (check) matchingMovies.push(movie)
     } 
 
     return matchingMovies
-  }, [])
+  }, [moviesInfo])
 
   return findMovies
 }
