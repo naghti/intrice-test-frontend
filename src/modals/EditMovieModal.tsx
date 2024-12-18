@@ -64,6 +64,7 @@ function EditMovieModal() {
       <div
         className="
           w-4/5
+          max-w-[1200px]
           bg-white
           rounded-lg
           p-5

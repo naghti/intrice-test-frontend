@@ -7,6 +7,12 @@ function MoviesBox() {
   const {moviesInfo} = useAppSelector(state => state.moviesReducer)
   const filteredMovies = useGetFilteredMovies()
 
+  if (!filteredMovies.length) return (
+    <div className="flex items-center justify-center grow">
+      <span>Нету Данных</span>
+    </div>
+  )
+
   return (
     <div 
       className="

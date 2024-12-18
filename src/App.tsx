@@ -5,7 +5,7 @@ import AddMovie from "./components/Buttons/AddMovie"
 import MoviesBox from './components/Containers/MoviesBox'
 import Controls from './components/Controls'
 import WidthBox from './components/Containers/WidthBox'
-import ModalsWrapper from './ModalsWrapper'
+import ModalsWrapper from './components/ModalsWrapper'
 import { useAppDispatch, useAppSelector } from './hooks/redux'
 import { modalsSlice } from './store/reducers/ModalsSlice'
 import { useMoviesList } from './hooks/MoviesHooks'
@@ -22,7 +22,9 @@ function App() {
       <div className='flex flex-col min-h-screen'>
         <Header/>
         <div className='grow bg-bodyBackground px-6 py-8 flex just'>
-          <WidthBox>
+          <WidthBox
+            className={"flex flex-col"}
+          >
             <Controls/>
             <MoviesBox/>
           </WidthBox>

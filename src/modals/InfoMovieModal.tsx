@@ -38,20 +38,22 @@ function InfoMovieModal() {
     >
       <div
         className="
-          w-4/5 md:w-2/3 lg:w-1/2
+          w-4/5 
+          max-w-[1200px]
+          md:w-2/3 
+          lg:w-1/2
           bg-white
           rounded-lg
           shadow-lg
           flex
           relative
-          overflow-hidden
         "
         onClick={(e) => e.stopPropagation()}
       >
         <div 
           className="
-            w-1/3
-            h-80
+            w-2/5
+            min-w-40
             bg-gradient-to-b from-red-500 to-orange-500
             rounded-l-lg
             flex items-center justify-center

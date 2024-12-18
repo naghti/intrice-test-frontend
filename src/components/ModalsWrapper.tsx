@@ -1,7 +1,7 @@
-import { useAppSelector } from "./hooks/redux"
-import AddMovieModal from "./modals/AddMovieModal"
-import EditMovieModal from "./modals/EditMovieModal"
-import InfoMovieModal from "./modals/InfoMovieModal"
+import { useAppSelector } from "../hooks/redux"
+import AddMovieModal from "../modals/AddMovieModal"
+import EditMovieModal from "../modals/EditMovieModal"
+import InfoMovieModal from "../modals/InfoMovieModal"
 
 function ModalsWrapper() {
   const {
