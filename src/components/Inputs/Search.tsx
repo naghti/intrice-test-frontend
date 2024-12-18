@@ -21,7 +21,16 @@ function Search() {
     <IconContext.Provider
       value={{ size: '30px' }}
     >
-      <div className="h-9 flex align-center max-w-sm w-full relative">
+      <div 
+        className="
+          h-9
+          flex
+          align-center 
+          max-w-sm 
+          w-full 
+          relative
+          mx-2
+      ">
         <input 
           placeholder="Поиск"
           type="text" 

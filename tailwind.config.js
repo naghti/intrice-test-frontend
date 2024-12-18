@@ -11,6 +11,11 @@ export default {
       },
       colors: {
         'bodyBackground': 'rgb(247,247,248)'
+      },
+      gridAutoColumns: {
+        '20%': '20%',
+        '30%': '30%',
+        '100%': '100%',
       }
     },
   },

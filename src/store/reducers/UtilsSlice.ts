@@ -1,12 +1,22 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IMovie } from "../../models/IMovie";
+import { IFilters } from "../../models/IFilters";
 
-interface initialState {
+
+
+type initialState = {
   searchField: string;
+  filters: IFilters
 }
 
 const initialState: initialState = {
-  searchField: ""
+  searchField: "",
+  filters: {
+    createdAt: null,
+    genre: null,
+    release_year: null,
+    updatedAt: null
+  }
 }
 
 export const utilsSlice = createSlice({
@@ -15,7 +25,10 @@ export const utilsSlice = createSlice({
   reducers: {
     setSearchField: (state, action: PayloadAction<string>) => {
       state.searchField = action.payload
-    }
+    },
+    setFilter: (state, action: PayloadAction<[keyof IFilters, string | null]>) => {
+      state.filters[action.payload[0]] = action.payload[1]
+    },
   }
 })
 

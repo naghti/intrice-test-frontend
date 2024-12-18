@@ -6,4 +6,6 @@ export interface IMovie {
   director: string;
   actors: string;
   annotation: string;
+  createdAt: string;
+  updatedAt: string
 }

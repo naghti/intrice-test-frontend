@@ -2,7 +2,7 @@ import './App.css'
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import AddMovie from "./components/Buttons/AddMovie"
-import Movies from './components/Containers/Movies'
+import MoviesBox from './components/Containers/MoviesBox'
 import Controls from './components/Controls'
 import WidthBox from './components/Containers/WidthBox'
 import ModalsWrapper from './ModalsWrapper'
@@ -24,7 +24,7 @@ function App() {
         <div className='grow bg-bodyBackground px-6 py-8 flex just'>
           <WidthBox>
             <Controls/>
-            <Movies/>
+            <MoviesBox/>
           </WidthBox>
         </div>
         <Footer/>
